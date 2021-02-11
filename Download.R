@@ -20,10 +20,10 @@ Sequences <- data.frame(Name=header,Sequence=seq) #Separates sequences from head
 print(Sequences) # Prints out updated object to confirm headers have been successfully removed. 
 
 xnewline <- gsub("\\n","",seq)
-xnewline
 
-Sequences <- data.frame(Name = header, Sequence = seq)
+Sequences <- data.frame(Name = header, Sequence = xnewline) # Updates Sequences object to contain changes that remove newline characters
+
 
 write.csv(Sequences, "./Sequences.csv") # Outputs the data frame object to a file called "Sequences.csv"
-
+1
 
