@@ -19,8 +19,10 @@ seq <- gsub("^>.*sequence\\n([ATCG].*)","\\1",Sequences) # Creates an object tha
 Sequences <- data.frame(Name=header,Sequence=seq) #Separates sequences from headers
 print(Sequences) # Prints out updated object to confirm headers have been successfully removed. 
 
-gsub("","",Sequences)
+xnewline <- gsub("\\n","",seq)
+xnewline
 
+Sequences <- data.frame(Name = header, Sequence = seq)
 
 write.csv(Sequences, "./Sequences.csv") # Outputs the data frame object to a file called "Sequences.csv"
 
