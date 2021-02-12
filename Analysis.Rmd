@@ -1,5 +1,9 @@
-# Analysis.Rmd
-
+---
+title: "Analysis"
+author: "Kailee Morrison"
+date: "12/02/2021"
+output: html_document
+---
 Import the Sequences.csv file.
 ```{r}
 Dat <- read.csv("./Sequences.csv") # Imports dataset 
@@ -76,9 +80,4 @@ rownames(GCcontent) <- c("HQ433692.1","HQ433694.1","HQ433691.1") # Names the row
 GCcontent <- as.table(GCcontent) # Converts the information above into a table format
 print(GCcontent) # Prints final table 
 ```
-
-
-
-
-
 
