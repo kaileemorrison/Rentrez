@@ -11,10 +11,8 @@ Dat <- read.csv("./Sequences.csv") # Imports dataset
 
 Count the number of each base pair (A, T, C and G), in each of the three sequences. (Hint: do not include any characters from the header, use the nucleotide sequence only; you MIGHT use gsub(), nchar(), for loops, if/then statements)
 ```{r}
-
 Dat <- subset(Dat,select=c(Name, Sequence)) # Removes 'X' column from .csv file
 
-install.packages("stringr") # Installs Stringr package in R
 library(stringr) # Loads Stringr package in R
 
 Seq1 <- Dat[1,2] # Isolates sequence 1 from [row 1, column 2]
@@ -52,7 +50,7 @@ Print out the number of each nucleotide as a table for each of the three sequenc
 ```{r}
 Nucleotides <- matrix(c(154,114,82,131,155,114,81,131,154,115,81,131),ncol=4,byrow=TRUE) # Organizes the number of each nucleotide for each sequence into a matrix. 
 colnames(Nucleotides) <- c("A","T","C","G") # Labels the column names
-rownames(Nucleotides) <- c("Seq1","Seq2", "Seq") # Labels the row names 
+rownames(Nucleotides) <- c("Seq1","Seq2", "Seq3") # Labels the row names 
 Nucleotides <- as.table(Nucleotides) # Converts the information above into table format 
 print(Nucleotides) # Prints output of table 
 ```
